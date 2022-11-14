@@ -10,4 +10,12 @@ services:
    kocidasrv:
       image: registry.gitlab.tcint.cz/tc/kocida/kocidasrv
       ports: ['8787:8080']
-      networks: [kocida]   
+      networks: [kocida]
+      deploy:
+        resources:
+          limits:
+            #cpus: '0.001'
+            memory: 150M
+          reservations:
+            #cpus: '0.0001'
+            memory: 150M
