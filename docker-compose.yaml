@@ -1,5 +1,5 @@
 networks:
-   kocida
+   kocida:
 services:
    kocidasrv:
       image: registry.gitlab.tcint.cz/tc/kocida/kocidasrv
