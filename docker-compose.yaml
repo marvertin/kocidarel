@@ -4,10 +4,10 @@ networks:
     ipam:
       driver: default
       config:
-      - subnet:  192.168.201.64/28
+      - subnet:  192.168.202.64/28
 
 services:
    kocidasrv:
       image: registry.gitlab.tcint.cz/tc/kocida/kocidasrv
       ports: ['8787:8080']
-   networks: [kocida]   
+      networks: [kocida]   
