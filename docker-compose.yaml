@@ -1,5 +1,5 @@
 networks:
-  default:
+  kocida:
     driver: bridge
     ipam:
       driver: default
@@ -10,3 +10,4 @@ services:
    kocidasrv:
       image: registry.gitlab.tcint.cz/tc/kocida/kocidasrv
       ports: ['8787:8080']
+   networks: [kocida]   
