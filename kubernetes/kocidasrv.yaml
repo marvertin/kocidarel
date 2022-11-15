@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kocidasrv
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kocidasrv
+  template:
+    metadata:
+      labels:
+        app: kocidasrv
+    spec:
+      containers:
+      - name: nginx
+        image: marcertin/kocidasrv
+        ports:
+        - containerPort: 8080
