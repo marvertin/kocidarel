@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: kocidasrv
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: kocidasrv
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: marcertin/kocidasrv
+        image: marvertin/kocidasrv
         ports:
         - containerPort: 8080
